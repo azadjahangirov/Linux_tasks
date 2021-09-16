@@ -3,9 +3,34 @@
 
 #1) Execute the pwd command to check your location in the directory tree. Run the lscommand with appropriate switches to show files in the current directory along with ALL HIDDEN FILES. Redirect this command result to this file /tmp/content.txt
 # Solution:  Using below commands task is successfully completed.
-# ls >> /tmp/content.txt
+# ls -la >> /tmp/content.txt
 
-#2) Log on to ec2 as ubuntu and execute the logname, whoami, who, and w . Verify the identity of ubuntu by comparing the output of these commands. The output should show ubuntu as the user logged on and running these commands. Execute the id and groups commands and verify the identity of ubuntu by comparing the output of these commands. Identify the additional information that the id command provides but not the groups command. Record your results in a text file created with the vi editor in ubuntu’s home directory.
+#2) a)Log on to ec2 as ubuntu and execute the logname, whoami, who, and w commands one at a time. Verify the identity of ubuntu by comparing the output of these commands. The output should show ubuntu as the user logged on and running these commands. b)Execute the id and groups commands and verify the identity of ubuntu by comparing the output of these commands. Identify the additional information that the id command provides but not the groups command. c)Record your results in a text file created with the vi editor in ubuntu’s home directory.
+# Solution:
+# a)
+#commands: logname ; whoami ; who ; w
+#result: 
+#ubuntu
+#ubuntu
+#ubuntu   pts/0        2021-09-16 22:15 (3.126.121.35)
+# 22:53:17 up 2 days,  8:07,  1 user,  load average: 0.00, 0.00, 0.00
+# USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+# ubuntu   pts/0    3.126.121.35     22:15    0.00s  0.09s  0.00s w
+# b)
+#command: id
+#result:  uid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),119(docker)
+
+#command: group
+#result:  ubuntu docker
+
+# c)
+# logname >> task2_results.txt
+# whoami >> task2_results.txt
+# who >> task2_results.txt
+# w >> task2_results.txt
+# id >> task2_results.txt
+# groups >> task2_results.txt
+
 
 # 3) Log on to ec2 as root, execute the last and lastb commands, and record in a file which users have recently logged in to and out of the system successfully and unsuccessfully. Also list the timestamp when the system was last rebooted. Use the vi editor to record your results.
 

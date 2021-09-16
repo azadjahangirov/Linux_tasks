@@ -1,0 +1,20 @@
+#! /bin/bash
+
+# Below command
+total 72
+drwxr-xr-x 9 ubuntu ubuntu  4096 Sep 16 17:33 .
+drwxr-xr-x 3 root   root    4096 Sep 13 13:32 ..
+-rw------- 1 ubuntu ubuntu  5613 Sep 16 15:22 .bash_history
+-rw-r--r-- 1 ubuntu ubuntu   220 Feb 25  2020 .bash_logout
+-rw-r--r-- 1 ubuntu ubuntu  3771 Feb 25  2020 .bashrc
+drwx------ 2 ubuntu ubuntu  4096 Sep 13 13:37 .cache
+-rw-rw-r-- 1 ubuntu ubuntu    30 Sep 16 17:33 content.txt
+drwxrwxr-x 2 ubuntu ubuntu  4096 Sep 13 15:04 Desktop
+drwxrwxr-x 2 ubuntu ubuntu  4096 Sep 13 17:01 docker
+-rw-r--r-- 1 ubuntu ubuntu   807 Feb 25  2020 .profile
+drwx------ 2 ubuntu ubuntu  4096 Sep 14 15:54 .ssh
+-rw-r--r-- 1 ubuntu ubuntu     0 Sep 13 13:56 .sudo_as_admin_successful
+drwxrwxr-x 3 ubuntu ubuntu  4096 Sep 16 13:56 task1_configs
+drwxrwxr-x 3 ubuntu ubuntu  4096 Sep 16 16:39 testlad
+drwxrwxr-x 2 ubuntu ubuntu  4096 Sep 16 17:25 tmp
+-rw------- 1 ubuntu ubuntu 10799 Sep 16 17:33 .viminfo

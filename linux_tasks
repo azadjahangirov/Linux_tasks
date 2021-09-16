@@ -1,0 +1,34 @@
+#! /bin/bash
+
+
+1) Execute the pwd command to check your location in the directory tree. Run the ls
+command with appropriate switches to show files in the current directory along with ALL HIDDEN FILES. Redirect this command result to this file
+/tmp/content.txt
+# Using below commands task is successfully completed.
+ls >> /tmp/content.txt
+
+2) Log on to ec2 as ubuntu and execute the logname, whoami, who, and w . Verify the identity of
+ubuntu by comparing the output of these commands. The output should show ubuntu as the user logged on and running
+these commands. Execute the id and groups commands and verify the identity of ubuntu by comparing the output of
+these commands. Identify the additional information that the id command provides but not the groups command.
+Record your results in a text file created with the vi editor in ubuntu’s home directory.
+
+3) Log on to ec2 as root, execute the last and lastb commands, and record in a file which users have recently logged in
+to and out of the system successfully and unsuccessfully. Also list the timestamp when the system was last rebooted.
+Use the vi editor to record your results.
+
+4) Log on to ec2 as ubuntu and execute the hostname and uname commands. Identify the system’s name, kernel version,
+RHEL release, and the hardware architecture of this system. Record your results in a file using the vi editor.
+
+5) Log on to ec2 as ubuntu and execute the date and timedatectl commands to check the current system date and time.
+Identify the differences between the two outputs. Use timedatectl and change the system date to a date in January of
+the following year. Issue the date command and change the system time to one hour ahead of the current time. Observe
+the new date and time with both commands. Reset the date and time back to the current actual time using either the
+date or the timedatectl command.
+
+6) Log on to ec2 as ubuntu and execute the uptime command. Identify the amount of time the system has been up for and
+the number of users currently logged on. Run the wc command and show how many lines, words, and bytes are in the
+/etc/profile file.
+
+7) Log on to ec2 as ubuntu and execute the tar command to archive the contents of the entire /etc directory tree. List content of the tar archive 
+to the file. Restore the archive file to the /opt directory

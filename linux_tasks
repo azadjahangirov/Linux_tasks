@@ -34,6 +34,39 @@
 
 # 3) Log on to ec2 as root, execute the last and lastb commands, and record in a file which users have recently logged in to and out of the system successfully and unsuccessfully. Also list the timestamp when the system was last rebooted. Use the vi editor to record your results.
 
+' command:sudo su
+result:root@ip-172-31-12-115:/home/ubuntu#
+
+command: last -Fn 6  -- "-n"shows last 6 lines to show "-F" full login and logout times and dates
+result:" 
+ubuntu   pts/0        3.65.27.111      Fri Sep 17 21:06:23 2021   still logged in
+ubuntu   pts/0        18.192.21.173    Fri Sep 17 16:31:40 2021 - Fri Sep 17 16:53:32 2021  (00:21)
+ubuntu   pts/0        35.158.215.7     Fri Sep 17 14:14:20 2021 - Fri Sep 17 14:58:40 2021  (00:44)
+reboot   system boot  5.11.0-1017-aws  Fri Sep 17 14:09:43 2021   still running
+ubuntu   pts/0        3.126.121.35     Thu Sep 16 22:15:57 2021 - Thu Sep 16 23:26:50 2021  (01:10)
+ubuntu   pts/0        18.196.191.111   Thu Sep 16 19:37:32 2021 - Thu Sep 16 20:13:10 2021  (00:35)
+
+command: lastb -Fn 6 --last unsuccessfully logged in and out.
+result: 
+csgoserv ssh:notty    199.19.226.34    Fri Sep 17 20:33:58 2021 - Fri Sep 17 20:33:58 2021  (00:00)
+csgo     ssh:notty    199.19.226.34    Fri Sep 17 20:33:57 2021 - Fri Sep 17 20:33:57 2021  (00:00)
+csgoserv ssh:notty    199.19.226.34    Fri Sep 17 20:33:54 2021 - Fri Sep 17 20:33:54 2021  (00:00)
+csgo     ssh:notty    199.19.226.34    Fri Sep 17 20:33:53 2021 - Fri Sep 17 20:33:53 2021  (00:00)
+csgo     ssh:notty    199.19.226.34    Fri Sep 17 20:33:52 2021 - Fri Sep 17 20:33:52 2021  (00:00)
+steam    ssh:notty    199.19.226.34    Fri Sep 17 20:33:50 2021 - Fri Sep 17 20:33:50 2021  (00:00)
+
+command: last reboot  --displays last reboot times
+result:
+reboot   system boot  5.11.0-1017-aws  Fri Sep 17 14:09   still running
+reboot   system boot  5.4.0-1045-aws   Tue Sep 14 14:45 - 23:26 (2+08:41)
+reboot   system boot  5.4.0-1045-aws   Mon Sep 13 13:32 - 23:42  (10:10)
+
+last -Fn 6 > "lastlogs"
+lastb -Fn 6 >> lastlogs
+last reboot >> lastlogs
+'
+
+
 #4) Log on to ec2 as ubuntu and execute the hostname and uname commands. Identify the system’s name, kernel version, RHEL release, and the hardware architecture of this system. Record your results in a file using the vi editor.
 
 #5) Log on to ec2 as ubuntu and execute the date and timedatectl commands to check the current system date and time. Identify the differences between the two outputs. Use timedatectl and change the system date to a date in January of the following year. Issue the date command and change the system time to one hour ahead of the current time. Observe the new date and time with both commands. Reset the date and time back to the current actual time using either the date or the timedatectl command.

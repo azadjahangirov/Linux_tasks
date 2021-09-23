@@ -93,5 +93,9 @@ uname -ip >> system_info'
 #5) Log on to ec2 as ubuntu and execute the date and timedatectl commands to check the current system date and time. Identify the differences between the two outputs. Use timedatectl and change the system date to a date in January of the following year. Issue the date command and change the system time to one hour ahead of the current time. Observe the new date and time with both commands. Reset the date and time back to the current actual time using either the date or the timedatectl command.
 
 #6) Log on to ec2 as ubuntu and execute the uptime command. Identify the amount of time the system has been up for and the number of users currently logged on. Run the wc command and show how many lines, words, and bytes are in the /etc/profile file.
+#commands are below:
+'uptime  --shows last log
+wc -lwc /etc/profile  -- shows lines, words and bytes.'
+
 
 #7) Log on to ec2 as ubuntu and execute the tar command to archive the contents of the entire /etc directory tree. List content of the tar archive  to the file. Restore the archive file to the /opt directory

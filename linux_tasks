@@ -99,3 +99,8 @@ wc -lwc /etc/profile  -- shows lines, words and bytes.'
 
 
 #7) Log on to ec2 as ubuntu and execute the tar command to archive the contents of the entire /etc directory tree. List content of the tar archive  to the file. Restore the archive file to the /opt directory
+
+'sudo tar -cvf archive.tar /etc/    -- to archive entire etc to tar file
+sudo tar -xvf archive.tar -C /etc/opt   -- extract the archive.tar file to opt'
+
+
